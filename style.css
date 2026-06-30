@@ -857,7 +857,7 @@ section {
 /* Why Us Section */
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-bottom: 6rem;
 }
@@ -1469,9 +1469,12 @@ section {
     }
 
     .services-grid,
-    .why-grid,
     .demo-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        gap: 1.5rem;
     }
 
     .demo-modal {
@@ -1532,10 +1535,13 @@ section {
 
     .services-grid,
     .packages-grid,
-    .why-grid,
     .demo-grid,
     .footer-links-group {
         grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        gap: 1rem;
     }
 
     .service-card {
@@ -1564,10 +1570,12 @@ section {
         font-size: 2rem;
     }
 
+    .why-grid {
+        gap: 1.25rem;
+    }
+
     .why-card {
-        border-left: none;
-        border-top: 1px solid var(--border-color);
-        padding: 1.5rem 0;
+        padding: 1.5rem;
     }
 
     .footer-content {
@@ -1686,12 +1694,18 @@ section {
         padding: 0.6rem 0.75rem;
     }
 
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+
     .why-card {
-        padding: 1.25rem 0;
+        padding: 1.25rem;
     }
 
     .why-title {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .why-desc {
@@ -1833,6 +1847,15 @@ section {
 
     .package-price-amount {
         font-size: 1.3rem;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .why-card {
+        padding: 1rem;
     }
 
     .service-card {
