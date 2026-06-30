@@ -246,19 +246,20 @@ document.addEventListener('DOMContentLoaded', () => {
         let animRunning = !prefersReducedMotion;
         let rafId = null;
 
+        const isMobile = window.innerWidth < 768;
+        const fontSize = isMobile ? 10 : 14;
+
         const resizeCanvas = () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-            const fontSize = 14;
             columns = Math.floor(canvas.width / fontSize);
             drops = [];
             for (let x = 0; x < columns; x++) drops[x] = 1;
         };
         resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('resize', resizeCanvas, { passive: true });
 
         const characters = '01';
-        const fontSize = 14;
 
         const draw = () => {
             ctx.fillStyle = 'rgba(34, 34, 34, 0.05)';
