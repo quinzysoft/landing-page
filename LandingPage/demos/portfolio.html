@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SATU Kontraktor — Studio Arsitektur & Konstruksi Industrial-Luxury — Mewujudkan struktur monumental dengan karakter tegas dan prestisius.">
+<meta name="keywords" content="kontraktor premium, arsitek industrial, SATU kontraktor, arsitektur beton, konstruksi mewah Jakarta">
+<meta name="author" content="SATU Kontraktor">
+<meta property="og:title" content="SATU Kontraktor — Industrial-Luxury Architecture & Construction">
+<meta property="og:description" content="Struktur beton monumental dengan estetika tegas, presisi, dan prestisius.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<title>SATU KONTRAKTOR — Industrial-Luxury Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #0a0a08;     /* Hitam arang */
+    --bg-light: #f5f0e8;    /* Krem kertas */
+    --surface-dark: #121210;
+    --border-dark: #22221e;
+    --border-light: #e5dfd5;
+    --text-light: #f5f0e8;
+    --text-dark: #0a0a08;
+    --accent: #d4a853;       /* Emas kontraktor */
+    --accent-light: rgba(212, 168, 83, 0.1);
+    --serif: 'Lora', Georgia, serif;
+    --sans: 'Bebas Neue', sans-serif;
+    --tr: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--serif);
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; }
+
+  /* FLOATING NAVIGATION WITH LIVE PROJECT COUNTER */
+  nav {
+    position: fixed;
+    top: 2rem; left: 3rem; right: 3rem;
+    z-index: 200;
+    height: 64px;
+    background: rgba(10, 10, 8, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-dark);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform var(--tr);
+  }
+
+  .nav-left {
+    font-family: var(--sans);
+    font-size: 1.6rem;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+  }
+
+  .nav-left span {
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .nav-link {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: rgba(245, 240, 232, 0.6);
+    transition: color var(--tr), transform var(--tr);
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .nav-right-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* Live project counter badge */
+  .live-counter {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(212, 168, 83, 0.08);
+    border: 1px solid rgba(212, 168, 83, 0.25);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    background: #52c41a;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #52c41a;
+    animation: blink 1.8s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .live-text {
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+  }
+
+  .btn-nav-action {
+    background: var(--accent);
+    border: none;
+    color: var(--bg-dark);
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    padding: 0.5rem 1.5rem;
+    transition: all var(--tr);
+  }
+
+  .btn-nav-action:hover {
+    background: var(--text-light);
+    transform: translateY(-2px);
+  }
+
+  /* HERO (SPLIT + LARGE STATS) */
+  .hero-section {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    padding-top: 8rem;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .hero-content {
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid var(--border-dark);
+  }
+
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 1.4rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .hero-title {
+    font-family: var(--sans);
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-light);
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    color: rgba(245, 240, 232, 0.7);
+    max-width: 540px;
+    margin-bottom: 3.5rem;
+  }
+
+  /* Big Stats in Hero */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding-top: 3.5rem;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-num {
+    font-family: var(--sans);
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: rgba(245, 240, 232, 0.5);
+    text-transform: uppercase;
+  }
+
+  .hero-visual {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(30%) contrast(110%);
+    transition: transform 8s ease;
+  }
+
+  .hero-visual:hover img {
+    transform: scale(1.05);
+  }
+
+  .hero-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(10,10,8,0.5), transparent);
+    pointer-events: none;
+  }
+
+  /* ABOUT/PROFILE SECTION (HIGH-CONTRAST LIGHT CANVASES) */
+  .about-section {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    padding: 10rem 6rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  /* Asymmetric Grid */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 8rem;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-frame {
+    border: 8px solid var(--text-dark);
+    position: relative;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+  }
+
+  .about-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) contrast(120%);
+    transition: transform var(--tr);
+  }
+
+  .about-visual:hover .about-img-frame img {
+    transform: scale(1.04);
+  }
+
+  /* Industrial-Luxury floating card */
+  .about-badge {
+    position: absolute;
+    bottom: -3rem; right: -3rem;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border-left: 4px solid var(--accent);
+    padding: 2rem;
+    min-width: 260px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+
+  .badge-title {
+    font-family: var(--sans);
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge-role {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .badge-meta {
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    color: rgba(245, 240, 232, 0.4);
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-dark);
+    padding-top: 0.75rem;
+  }
+
+  .about-content {
+    max-width: 600px;
+  }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 1.3rem;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .about-title {
+    font-family: var(--sans);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-desc-main {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+
+  .about-desc-sub {
+    font-size: 15px;
+    color: #55524c;
+    margin-bottom: 3.5rem;
+  }
+
+  /* Serious Coordinate/Specification Table */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .spec-table tr {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .spec-table td {
+    padding: 1rem 0;
+  }
+
+  .spec-table td:last-child {
+    text-align: right;
+    color: var(--accent);
+  }
+
+  /* SERVICES SECTION (DARK INDUSTRIAL CANVAS) */
+  .services-section {
+    padding: 10rem 6rem;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .section-header-editorial {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6rem;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-left {
+    max-width: 600px;
+  }
+
+  .header-desc {
+    font-size: 17px;
+    color: rgba(245, 240, 232, 0.6);
+    max-width: 400px;
+    text-align: right;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Asymmetric Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    background: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 4rem 3rem;
+    transition: all var(--tr);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--tr);
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 168, 83, 0.25);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-num {
+    font-family: var(--sans);
+    font-size: 2.2rem;
+    color: rgba(245, 240, 232, 0.15);
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .service-title {
+    font-family: var(--sans);
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-desc {
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  .btn-service {
+    background: none;
+    border: none;
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0;
+    transition: color var(--tr);
+  }
+
+  .btn-service:hover {
+    color: var(--text-light);
+  }
+
+  /* GALLERY SECTION (ASYMMETRIC GRID WITH DRAMATIC HOVER REVEAL) */
+  .gallery-section {
+    padding: 10rem 6rem;
+    background: var(--surface-dark);
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .gallery-grid-asymmetric {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--border-dark);
+    aspect-ratio: 16/11;
+  }
+
+  /* Asymmetric spans */
+  .gallery-item.span-8 { grid-column: span 8; }
+  .gallery-item.span-4 { grid-column: span 4; }
+  .gallery-item.span-6 { grid-column: span 6; }
+  .gallery-item.tall { aspect-ratio: 16/24; }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(70%) contrast(110%);
+    transition: transform var(--tr), filter var(--tr);
+  }
+
+  /* Dramatic Hover Reveal Overlay */
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,10,8,0.95) 0%, rgba(10,10,8,0.4) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity var(--tr), transform var(--tr);
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gallery-item:hover .gallery-img {
+    transform: scale(1.06);
+    filter: grayscale(0%) contrast(100%);
+  }
+
+  .gallery-category {
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .gallery-title {
+    font-family: var(--sans);
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-gallery-detail {
+    background: none;
+    border: none;
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    text-transform: uppercase;
+    align-self: flex-start;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.2rem;
+    transition: color var(--tr), border-color var(--tr);
+  }
+
+  .btn-gallery-detail:hover {
+    color: var(--accent);
+    border-color: var(--text-light);
+  }
+
+  /* CTA SECTION (HIGH-IMPACT HIGH-CONTRAST) */
+  .cta-section {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    padding: 10rem 6rem;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  .cta-title {
+    font-family: var(--sans);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .cta-title em {
+    font-style: normal;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-dark);
+  }
+
+  .cta-desc {
+    font-size: 18px;
+    color: #4a4740;
+    max-width: 640px;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-cta-giant {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--sans);
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    padding: 1.5rem 4rem;
+    border: none;
+    transition: all var(--tr);
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+
+  .btn-cta-giant:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(212, 168, 83, 0.3);
+  }
+
+  /* Technical graphic element */
+  .cta-blueprint-bg {
+    position: absolute;
+    right: 5%; top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: 400px;
+    opacity: 0.05;
+    pointer-events: none;
+  }
+
+  /* TESTIMONIALS (MINIMALIST & PRESTIGIOUS) */
+  .testimonials-section {
+    padding: 10rem 6rem;
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .test-card {
+    background: var(--surface-dark);
+    border: 1px solid var(--border-dark);
+    padding: 4rem 3rem;
+    position: relative;
+  }
+
+  .test-card::before {
+    content: '“';
+    position: absolute;
+    top: 2rem; left: 3rem;
+    font-family: var(--serif);
+    font-size: 5rem;
+    color: var(--accent);
+    opacity: 0.15;
+    line-height: 1;
+  }
+
+  .test-text {
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(245, 240, 232, 0.85);
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .test-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border-top: 1px solid var(--border-dark);
+    padding-top: 1.5rem;
+  }
+
+  .test-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border: 1px solid var(--border-dark);
+  }
+
+  .test-meta h4 {
+    font-family: var(--sans);
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .test-meta p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg-dark);
+    padding: 8rem 6rem 4rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(3, 1fr);
+    gap: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid var(--border-dark);
+    margin-bottom: 3rem;
+  }
+
+  .footer-logo {
+    font-family: var(--sans);
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .footer-logo span {
+    color: var(--accent);
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.5);
+    max-width: 280px;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-socials {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--sans);
+    font-size: 1.1rem;
+    color: rgba(245, 240, 232, 0.5);
+    transition: all var(--tr);
+  }
+
+  .social-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--surface-dark);
+  }
+
+  .footer-col h3 {
+    font-family: var(--sans);
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-col ul a {
+    font-size: 14px;
+    color: rgba(245, 240, 232, 0.5);
+    transition: color var(--tr);
+  }
+
+  .footer-col ul a:hover {
+    color: var(--accent);
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    color: rgba(245, 240, 232, 0.3);
+    text-transform: uppercase;
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1024px) {
+    nav { left: 1.5rem; right: 1.5rem; top: 1.5rem; }
+    section, .about-section, .services-section, .gallery-section, .testimonials-section, .cta-section {
+      padding: 6rem 3rem;
+    }
+    .hero-section { grid-template-columns: 1fr; padding-top: 6rem; }
+    .hero-content { border-right: none; border-bottom: 1px solid var(--border-dark); padding: 4rem 1.5rem; }
+    .hero-visual { aspect-ratio: 16/9; }
+    .about-grid { grid-template-columns: 1fr; gap: 6rem; }
+    .about-badge { right: 0; bottom: -3rem; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid-asymmetric { grid-template-columns: 1fr 1fr; }
+    .gallery-item.span-8, .gallery-item.span-4, .gallery-item.span-6 { grid-column: span 6; }
+    .cta-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+    .cta-actions { justify-content: center; }
+    .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    nav { top: 0; left: 0; right: 0; border: none; border-bottom: 1px solid var(--border-dark); }
+    .nav-links { display: none; }
+    .live-counter { display: none; }
+    .services-grid { grid-template-columns: 1fr; }
+    .gallery-grid-asymmetric { grid-template-columns: 1fr; }
+    .gallery-item.span-8, .gallery-item.span-4, .gallery-item.span-6 { grid-column: span 12; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+
+  .footer-link-disabled {
+    color: var(--muted);
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING NAVIGATION WITH LIVE PROJECT COUNTER -->
+<nav id="navbar" aria-label="Navigasi utama">
+  <div class="nav-left" aria-label="Beranda SATU Kontraktor">
+    S A T U<span>.</span>
+  </div>
+  <div class="nav-links">
+    <a href="#about" class="nav-link">Tentang</a>
+    <a href="#services" class="nav-link">Layanan</a>
+    <a href="#works" class="nav-link">Proyek</a>
+    <a href="#testimonials" class="nav-link">Ulasan</a>
+  </div>
+  <div class="nav-right-container">
+    <div class="live-counter" aria-label="14 proyek berjalan saat ini">
+      <div class="live-dot" aria-hidden="true"></div>
+      <span class="live-text">14 PROYEK AKTIF</span>
+    </div>
+    <button type="button" class="btn-nav-action" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hubungi</button>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO (SPLIT LAYOUT + STATS) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Studio Konstruksi & Rancang Bangun</span>
+      <h1 class="hero-title">Kami membangun<br>struktur <em>monumental</em><br>yang presisi</h1>
+      <p class="hero-desc">SATU meredefinisi arsitektur industrial-luxury. Perpaduan raw material beton dengan detail presisi logam emas, menciptakan ruang prestisius berdaya tahan abadi.</p>
+
+      <!-- Big stats inside Hero -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">142</span>
+          <span class="stat-label">Proyek Selesai</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Penghargaan Nasional</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="Bangunan beton industrial mewah bergaya kontemporer" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ABOUT/PROFILE SECTION (LIGHT HIGH-CONTRAST CANVASES) -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Jhon Doe, Principal Architect & Contractor" loading="lazy">
+        </div>
+        <!-- Industrial-luxury floating card -->
+        <div class="about-badge">
+          <h3 class="badge-title">JHON DOE</h3>
+          <p class="badge-role">Principal Builder & Architect</p>
+          <div class="badge-meta">
+            <span>REG. NO. 4082/26</span>
+            <span>BDG. TEAM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="section-label">Struktur & Profil</span>
+        <h2 class="about-title">Arsitek yang serius<br>dan prestisius.</h2>
+        <p class="about-desc-main">"Sebuah bangunan adalah wujud kejujuran material. Kami tidak menyembunyikan kekuatan beton; kami memuliakannya."</p>
+        <p class="about-desc-sub">Selama 16 tahun, Jhon Doe memimpin SATU Kontraktor untuk mengubah lanskap arsitektur modern. Dengan komitmen tanpa kompromi pada presisi struktural dan koordinasi lapangan, kami hanya menangani proyek-proyek prestisius dengan tingkat kompleksitas tinggi.</p>
+
+        <!-- Blueprint Coordinate Table -->
+        <table class="spec-table" aria-label="Spesifikasi Lisensi Studio">
+          <tr>
+            <td>Koordinat Operasional</td>
+            <td>6.2088° S, 106.8456° E</td>
+          </tr>
+          <tr>
+            <td>Lisensi Konstruksi</td>
+            <td>G1-S1-A908 — KELAS UTAMA</td>
+          </tr>
+          <tr>
+            <td>Spesialisasi Material</td>
+            <td>Raw Concrete, Structural Steel, Brass Accent</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION (DARK INDUSTRIAL CANVAS) -->
+  <section class="services-section" id="services">
+    <div class="section-header-editorial">
+      <div class="header-left">
+        <span class="section-label">Bidang Keahlian</span>
+        <h2 class="hero-title" style="font-size: 3.5rem; margin-bottom: 0;">Layanan <em>Utama</em></h2>
+      </div>
+      <p class="header-desc">Metodologi terintegrasi dari kalkulasi struktur awal hingga sentuhan akhir interior.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <p class="service-num">01 /</p>
+        <h3 class="service-title">Struktur & Beton</h3>
+        <p class="service-desc">Spesialisasi pengerjaan struktur beton cor terekspos (cast-in-place raw concrete) dengan cetakan panel khusus untuk hasil permukaan yang presisi tanpa cacat.</p>
+        <button type="button" class="btn-service">Pelajari Struktur &rarr;</button>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <p class="service-num">02 /</p>
+        <h3 class="service-title">Desain Interior</h3>
+        <p class="service-desc">Penggabungan material industrial mentah dengan kemewahan fungsional. Mebel besi kustom, dinding panel kuningan, dan sistem pencahayaan arsitektural.</p>
+        <button type="button" class="btn-service">Pelajari Interior &rarr;</button>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <p class="service-num">03 /</p>
+        <h3 class="service-title">Elevasi & Eksterior</h3>
+        <p class="service-desc">Perancangan fasad asimetris tahan cuaca ekstrem menggunakan kombinasi baja struktural, kaca tempered low-E, dan panel batu alam tebal.</p>
+        <button type="button" class="btn-service">Pelajari Elevasi &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION (EDITORIAL ASYMMETRIC GRID WITH DRAMATIC HOVER) -->
+  <section class="gallery-section" id="works">
+    <div class="section-header-editorial">
+      <div class="header-left">
+        <span class="section-label">Galeri Karya</span>
+        <h2 class="hero-title" style="font-size: 3.5rem; margin-bottom: 0;">Proyek <em>Pilihan</em></h2>
+      </div>
+      <p class="header-desc">Dokumentasi hasil pengerjaan struktur dengan tingkat presisi dan detail tinggi.</p>
+    </div>
+
+    <div class="gallery-grid-asymmetric" role="group" aria-label="Portofolio konstruksi kami">
+      <!-- Item 1 (Wide span-8) -->
+      <div class="gallery-item span-8">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Residensial beton brutalist minimalis" class="gallery-img" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Residensial / Raw Concrete</span>
+          <h3 class="gallery-title">The Brutalist Villa</h3>
+          <button type="button" class="btn-gallery-detail">Review Proyek</button>
+        </div>
+      </div>
+
+      <!-- Item 2 (Tall span-4) -->
+      <div class="gallery-item span-4 tall">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Lounge interior industrial mewah dengan lampu kuning hangat" class="gallery-img" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Interior / Brass Accent</span>
+          <h3 class="gallery-title">Obsidian Suite</h3>
+          <button type="button" class="btn-gallery-detail">Review Proyek</button>
+        </div>
+      </div>
+
+      <!-- Item 3 (Span-6) -->
+      <div class="gallery-item span-6">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Desain bangunan eksterior modular modern" class="gallery-img" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Eksterior / Steel Frame</span>
+          <h3 class="gallery-title">Helix Canopy Residence</h3>
+          <button type="button" class="btn-gallery-detail">Review Proyek</button>
+        </div>
+      </div>
+
+      <!-- Item 4 (Span-6) -->
+      <div class="gallery-item span-6">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Fasad villa beton mewah kontemporer di malam hari" class="gallery-img" loading="lazy">
+        <div class="gallery-overlay">
+          <span class="gallery-category">Residensial / Monolith</span>
+          <h3 class="gallery-title">Monolith Concrete House</h3>
+          <button type="button" class="btn-gallery-detail">Review Proyek</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION (HIGH-IMPACT HIGH-CONTRAST) -->
+  <section class="cta-section" id="contact">
+    <!-- SVG Technical Grid Overlay -->
+    <svg class="cta-blueprint-bg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.1" aria-hidden="true" focusable="false">
+      <path d="M 0,10 L 100,10 M 0,20 L 100,20 M 0,30 L 100,30 M 0,40 L 100,40 M 0,50 L 100,50 M 0,60 L 100,60 M 0,70 L 100,70 M 0,80 L 100,80 M 0,90 L 100,90" />
+      <path d="M 10,0 L 10,100 M 20,0 L 20,100 M 30,0 L 30,100 M 40,0 L 40,100 M 50,0 L 50,100 M 60,0 L 60,100 M 70,0 L 70,100 M 80,0 L 80,100 M 90,0 L 90,100" />
+      <circle cx="50" cy="50" r="30" />
+    </svg>
+
+    <div class="cta-grid">
+      <div>
+        <span class="section-label" style="color: var(--accent);">Mari Bekerjasama</span>
+        <h2 class="cta-title">Siap membangun<br>proyek <em>monumental</em><br>berikutnya?</h2>
+        <p class="cta-desc">Hubungi kantor koordinasi kami untuk konsultasi teknis awal mengenai estimasi struktur, penjadwalan proyek, dan tinjauan blueprint.</p>
+      </div>
+      <div class="cta-actions">
+        <button type="button" class="btn-cta-giant" onclick="window.location.href='mailto:proyek@satu.id'">Diskusi Proyek</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (MINIMALIST & PRESTIGIOUS) -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-header-editorial">
+      <div class="header-left">
+        <span class="section-label">Ulasan Klien</span>
+        <h2 class="hero-title" style="font-size: 3.5rem; margin-bottom: 0;">Momen & <em>Kepercayaan</em></h2>
+      </div>
+      <p class="header-desc">Apa kata para pemilik properti prestisius yang mempercayakan rancang bangunnya pada kami.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Card 1 -->
+      <div class="test-card">
+        <p class="test-text">"Kualitas pengerjaan raw concrete pada villa kami luar biasa presisi. Garis sambungan cetakan sangat lurus dan bersih tanpa retak rambut sedikitpun. Kontraktor yang sangat berdisiplin."</p>
+        <div class="test-profile">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Budi Hartono" class="test-img" loading="lazy">
+          <div class="test-meta">
+            <h4>Budi Hartono</h4>
+            <p>Pemilik, The Brutalist Villa</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="test-card">
+        <p class="test-text">"Jhon Doe dan timnya adalah profesional sejati. Mereka menghormati integritas material besi-kuningan kustom kami dan menyelesaikannya tepat waktu dengan koordinasi luar biasa."</p>
+        <div class="test-profile">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Clara Amara" class="test-img" loading="lazy">
+          <div class="test-meta">
+            <h4>Clara Amara</h4>
+            <p>Direktur, Amara Development</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="test-card">
+        <p class="test-text">"Sistem struktur asimetris di Helix Canopy dieksekusi dengan kalkulasi rekayasa yang matang. Studio kontraktor yang prestisius dan sangat direkomendasikan."</p>
+        <div class="test-profile">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Rendy Pranata" class="test-img" loading="lazy">
+          <div class="test-meta">
+            <h4>Rendy Pranata</h4>
+            <p>Founder, Prime Group</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <span class="footer-logo">S A T U<span>.</span></span>
+      <p class="footer-tagline">Membangun mahakarya arsitektur industrial-luxury dengan komitmen presisi tanpa kompromi.</p>
+      <div class="footer-socials">
+        <span class="social-btn" role="img" aria-label="Instagram SATU Kontraktor">IG</span>
+        <span class="social-btn" role="img" aria-label="LinkedIn SATU Kontraktor">IN</span>
+        <span class="social-btn" role="img" aria-label="Youtube SATU Kontraktor">YT</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Proyek</h3>
+      <ul>
+        <li><a href="#works">Residensial</a></li>
+        <li><a href="#works">Komersial</a></li>
+        <li><a href="#works">Struktur Monolith</a></li>
+        <li><a href="#works">Konsep Lansekap</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Koordinasi</h3>
+      <ul>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="#services">Keahlian Teknik</a></li>
+        <li><span class="footer-link-disabled" aria-disabled="true">Lisensi G1-Kelas Utama</span></li>
+        <li><span class="footer-link-disabled" aria-disabled="true">Tinjauan Blueprint</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Kontak Kantor</h3>
+      <ul>
+        <li><a href="tel:+622155501234">+62 21 5550 1234</a></li>
+        <li><a href="mailto:proyek@satu.id">proyek@satu.id</a></li>
+        <li><span class="footer-link-disabled" aria-disabled="true">Petunjuk Jalan</span></li>
+        <li><span class="footer-link-disabled" aria-disabled="true">Jadwal Konsultasi</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 SATU KONTRAKTOR. LISENSI G1 UTAMA. DILINDUNGI.</p>
+    <p>Jl. Sudirman Kav. 52, Jakarta Selatan</p>
+  </div>
+</footer>
+
+<script>
+  // Navigation scrolling logic
+  const navbar = document.getElementById('navbar');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    // Show active scrolling background
+    if (window.scrollY > 60) {
+      navbar.style.background = 'rgba(10, 10, 8, 0.95)';
+      navbar.style.borderBottom = '1px solid var(--border-dark)';
+    } else {
+      navbar.style.background = 'rgba(10, 10, 8, 0.85)';
+      navbar.style.borderBottom = '1px solid var(--border-dark)';
+    }
+
+    // Hide navigation bar when scrolling down quickly, show when scrolling up
+    if (window.scrollY > lastScrollY && window.scrollY > 150) {
+      navbar.style.transform = 'translateY(-120%)';
+    } else {
+      navbar.style.transform = 'translateY(0)';
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  // Reveal elements dynamically on scroll (IntersectionObserver)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.stat-item, .service-card, .gallery-item, .test-card, .about-badge, .about-img-frame').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
