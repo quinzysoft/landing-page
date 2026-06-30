@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="QuinzySoft — Software House preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- left orange glow -->
+  <circle cx="180" cy="540" r="260" fill="#f97316" opacity="0.18"/>
+  <!-- right orange glow -->
+  <circle cx="1050" cy="120" r="220" fill="#facc15" opacity="0.10"/>
+
+  <!-- monogram badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="92" height="92" rx="12" fill="none" stroke="url(#accent)" stroke-width="2"/>
+    <text x="46" y="64" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="46" font-weight="700" text-anchor="middle" fill="url(#accent)">&lt;/&gt;</text>
+  </g>
+
+  <!-- main wordmark -->
+  <g transform="translate(80, 240)">
+    <text x="0" y="0" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="96" font-weight="700" fill="#f5f5f5" letter-spacing="-2">
+      &lt;Quinzy<tspan fill="url(#accent)">Soft</tspan>/&gt;
+    </text>
+  </g>
+
+  <!-- tagline -->
+  <text x="80" y="380" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="400" fill="#a3a3a3">
+    Web Development &amp; Web App
+  </text>
+  <text x="80" y="430" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="600" fill="#f5f5f5">
+    untuk bisnis Anda.
+  </text>
+
+  <!-- meta strip -->
+  <g transform="translate(80, 510)">
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="#10b981"/>
+    <text x="28" y="13" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="22" fill="#a3a3a3">Available for new projects</text>
+  </g>
+
+  <!-- bottom-right footer text -->
+  <text x="1120" y="580" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" fill="#666666" letter-spacing="2">
+    QUINZYSOFT.ID
+  </text>
+</svg>
